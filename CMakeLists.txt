@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.20)
+project(hft_stage1 CXX)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release)
+endif()
+add_compile_options(-O2 -g -fno-omit-frame-pointer -Wall -Wextra)
+add_executable(stage1 main.cpp
+        order_book_v1.hpp)
